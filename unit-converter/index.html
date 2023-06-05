@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Converter</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="logo2.png"/>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;1,200;1,300;1,400;1,500;1,600&display=swap');
+        </style>
+</head>
+<body>
+    <div class="header">
+        <h1 >Unit<span> Converters</span></h1>
+    </div>
+    <div class="heading">Unit Converter</div>
+    <div class="convert" id="convert">
+        <table border="0">
+            <tbody>
+                <tr>
+                    
+                    <td>
+                        <div class="conver">
+                        <select name="type" id="type" class="type" onchange="populate(this.id,'calfrom'); populated(this.id,'calto');">
+                            <option value="choose" selected>Choose Conversion Type</option>
+                            <option value="length">Length</option>
+                            <option value="Area">Area</option>
+                            <option value="data">Data Transfer Rate</option>
+                            <option value="digital">Digital Storage</option>
+                            <option value="energy">Energy</option>
+                            <option value="frequency">Frequency</option>
+                            <option value="fuel">Fuel Economy</option>
+                            <option value="mass">Mass</option>
+                            <option value="Plane">Plane Angle</option>
+                            <option value="pressure">Pressure</option>
+                            <option value="speed">speed</option>
+                            <option value="temperature">Temperature</option>
+                            <option value="time">Time</option>
+                            <option value="volume">Volume</option>
+                        </select>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="fromval">
+                            <b>From:</b>
+                        </label>
+                    </td>
+                    <td>&nbsp;</td>
+                    <td>
+                        <label for="toval">
+                            <b>To:</b>
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <form class="myform">
+                    <td>
+                        <input type="text" name="fromValue" id="fromval" class="finput" autofocus>
+
+                    </td>
+                    <td>&nbsp;</td>
+                    <td>
+                        <input type="number" name="toValue" id="toval" class="tinput" readonly>
+                    </td>
+                    </form>
+                </tr>
+                <tr>
+                    <td>
+                        <select name="calfrom" id="calfrom" class="fselect">
+                            <option value="" selected>Please specify conversion type</option>
+                            <option value="meter">Meter</option>
+                            <option value="kilometer">Kilometer</option>
+                            <option value="centimeter">Centimeter</option>
+                            <option value="milimeter">Milimeter</option>
+                            <option value="micrometer">Micrometer</option>
+                            <option value="nanometer">Nanometer</option>
+                            <option value="mile">Mile</option>
+                            <option value="yard">Yard</option>
+                            <option value="foot">Foot</option>
+                            <option value="inch">Inch</option>
+
+                        </select>
+                    </td>
+                    <td>&nbsp;</td>
+                    <td>
+                        <select name="calto" id="calto" class="tselect">
+                            <option value="" selected>Please specify conversion type</option>
+                            <option value="meter">Meter</option>
+                            <option value="kilometer">Kilometer</option>
+                            <option value="centimeter">Centimeter</option>
+                            <option value="milimeter">Milimeter</option>
+                            <option value="micrometer">Micrometer</option>
+                            <option value="nanometer">Nanometer</option>
+                            <option value="mile">Mile</option>
+                            <option value="yard">Yard</option>
+                            <option value="foot">Foot</option>
+                            <option value="inch">Inch</option>
+                        </select>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="button">
+            <button onclick ="clearResult()" id="btnreset" class="btnreset">Reset</button>
+            <button id="btncalculate" class="btncalculate">Calculate</button>
+        </div>
+    </div>
+    <div class="para1">
+        <div class="head1">
+        <h1>International<span> System of Units</span></h1>
+    </div>
+    <div class="siimg">
+        <img src="siunit.png" alt="Si Unit Chart" width="70%">
+    </div>
+    
+</div>
+<div class="content1">
+    <p>
+        The International System of Units is a global standard for expressing the magnitudes or quantities of important natural phenomena. Also referred to as the metric system, the System of Units is commonly abbreviated as SI, which comes from the original French name, Système international d'unités. The SI standard builds on an earlier system of measurement called the meter-kilogram-second (MKS) system.
+        
+    </p>
+</div>
+    
+    <div class="list">
+        <h1>Common Conversions</h1>
+<div class="convertone">
+    <ul>
+      <li><a href="#">cm to inches</a></li>
+      <li><a href="#">kg to lbs</a></li>
+      <li><a href="#">Celcius to Fahrenheit</a></li>
+      <li><a href="#">mm to inches</a></li>
+      <li><a href="#">meter to feet</a></li>
+      <li><a href="#">km to miles</a></li>
+      <li><a href="#">cm to feet</a></li>
+      <li><a href="#">grams to ounces</a></li>
+      <li><a href="#">mph to kph</a></li>
+      <li><a href="#">acres to square feet</a></li>
+      <li><a href="#">radians to degrees</a></li>
+      <li><a href="#">hp to kw</a></li>
+      <li><a href="#">meters to yards</a></li>
+      <li><a href="#">mL to cups</a></li>
+    </ul>
+</div>
+</div>
+<div class="content2">
+    <h1>Unit Converters-Full Version</h1>
+    <h2>Common Converters</h2>
+    <div class="list2">
+        <div class="comone">
+   <ul>
+    <li><a href="#">Length Converter</a></li>
+    <li><a href="#">Weight and Mass Converter</a></li>
+    <li><a href="#">Volume Converter</a></li>
+    <li><a href="#">Temperature Converter</a></li>
+    <li><a href="#">Area Converter</a></li>
+    <li><a href="#">Pressure Converter</a></li>
+    <li><a href="#">Energy Converter</a></li>
+    <li><a href="#">Volume-Dry Converter</a></li>
+    <li><a href="#">Currency Converter</a></li>
+</ul>
+   
+        </div>
+        <div class="comtwo">
+            <ul>
+                <li><a href="#">Case Converter</a></li>
+                <li><a href="#">Power Converter</a></li>
+                <li><a href="#">Force Converter</a></li>
+                <li><a href="#">Time Converter</a></li>
+                <li><a href="#">Speed Converter</a></li>
+                <li><a href="#">Angle Converter</a></li>
+                <li><a href="#">Fuel Consumption Converter</a></li>
+                <li><a href="#">Numbers Converter</a></li>
+                <li><a href="#">Data Storage Converter</a></li>
+            </ul>
+        </div>
+    </div>
+    </div>
+    <div class="flex">
+    <div class="content3">
+    <h2>Enginneering Converters</h2>
+        <div class="comone">
+        <ul>
+            <li><a href="#">Velocity- Angular Converter</a></li>
+            <li><a href="#">Acceleration Converter</a></li>
+            <li><a href="#">Acceleration Angular Converter</a></li>
+            <li><a href="#">Density Converter</a></li>
+            <li><a href="#">Specific Volume Converter</a></li>
+            <li><a href="#">Moment of Interia Converter</a></li>
+            <li><a href="#">Moment of Force Converter</a></li>
+            <li><a href="#">Torque Converter</a></li>
+        </ul>
+        <h2>Heat Converters</h2>
+        <ul>
+            <li><a href="#">Fuel Efficiency- Mass Converter</a></li>
+            <li><a href="#">Fuel Efficiency- Volume Converter</a></li>
+            <li><a href="#">Temperature Interval Converter</a></li>
+            <li><a href="#">Thermal Expansion Converter</a></li>
+            <li><a href="#">Thermal Resistance Converter</a></li>
+            <li><a href="#">Conductivity Converter</a></li>
+            <li><a href="#">Specific Heat Capacity Converter</a></li>
+            <li><a href="#">Heat Density Converter</a></li>
+            <li><a href="#">Heat Flux Density Converter</a></li>
+            <li><a href="#">Heat Transfer Coefficient Converter</a></li>
+        </ul>
+        <h2>Fluids Converters</h2>
+        <ul>
+            <li><a href="#">Flow Converter</a></li>
+            <li><a href="#">Flow- Mass Converter</a></li>
+            <li><a href="#">Flow- Molar Converter</a></li>
+            <li><a href="#">Mass Flux Density Converter</a></li>
+            <li><a href="#">Concentration- Molar Converter</a></li>
+            <li><a href="#">Concentration- Solution Converter</a></li>
+            <li><a href="#">Viscosity-Dynamic Converter</a></li>
+            <li><a href="#">Viscosity-Kinematic Converter</a></li>
+            <li><a href="#">Surface Tension Converter</a></li>
+            <li><a href="#">Permeability Converter</a></li>
+        
+        </ul>
+        <h2>Light Converters</h2>
+        <ul>
+            <li><a href="#">Luminance Converter</a></li>
+            <li><a href="#">Luminous Intensity Converter</a></li>
+            <li><a href="#">Illumination Converter</a></li>
+            <li><a href="#">Digital Image Resolution Converter</a></li>
+            <li><a href="#">Frequency Wavelength Converter</a></li>
+        </ul>
+        </div>
+</div>
+<div class="content3">
+    <h2>Electricity Converters</h2>
+        <div class="comone">
+        <ul>
+            <li><a href="#">Charge Converter</a></li>
+            <li><a href="#">Linear Charge Converter</a></li>
+            <li><a href="#">Surface Charge Density Converter</a></li>
+            <li><a href="#">volume Charge Density Converter</a></li>
+            <li><a href="#">Linear Current Density Converter</a></li>
+            <li><a href="#">Surface Current Density Converter</a></li>
+            <li><a href="#">Electric Field Strength Converter</a></li>
+            <li><a href="#">Electric Potential Converter</a></li>
+            <li><a href="#">Electric Resistence Converter</a></li>
+            <li><a href="#">Electric Resistivity Converter</a></li>
+            <li><a href="#">Electric Conductance Converter</a></li>
+            <li><a href="#">Electric Conductivity Converter</a></li>
+            <li><a href="#">Electrostatic Capacitance</a></li>
+            <li><a href="#">Inductance Capacitance</a></li>
+        </ul>
+        <h2>Magnetism Converter</h2>
+        <ul>
+            <li><a href="#">Magnetomotive Force Converter</a></li>
+            <li><a href="#">Magnetic Field Strength Converter</a></li>
+            <li><a href="#">Magnetic Flux Converter</a></li>
+            <li><a href="#">Magnetic Flux Density Converter</a></li>
+        </ul>
+        <h2>Magnetism Converters</h2>
+        <ul>
+            <li><a href="#">Radiation Converter</a></li>
+            <li><a href="#">Radiation-Activity Converter</a></li>
+            <li><a href="#">Radiation-Exposure Converter</a></li>
+            <li><a href="#">Radiation-Absorbed Converter</a></li>
+        </ul>
+        <h2>Other Converters</h2>
+            <ul>
+                <li><a href="#">Perfixes Converter</a></li>
+                <li><a href="#">Data Transfer Converter</a></li>
+                <li><a href="#">Sound Converter</a></li>
+                <li><a href="#">Typography Converter</a></li>
+                <li><a href="#">Volume- Lumber Converter</a></li>
+            </ul>
+        </div>
+</div>
+</div>
+<div class="para3">
+    <p>A unit is a measurement of a quantity that is defined or adopted by tradition or law. Other quantities can be expressed as a multiple of the unit.</p>
+    <p>In human history, various unit systems were developed and used in different regions and cultures. Currently, the global standard of measurement is the International System of Units (SI), which is a modern form of the metric system. Although SI is intended for global use, it has not been fully adopted, and some other systems of measurement are still used in parts of the world.</p>
+    <p>The intent of this site is to provide a convenient means to convert between the various units of measurement within different systems, as well as to provide a basic understanding of the systems currently in use, and how they interact. Refer to the Common Unit Systems page for further information.</p>
+
+</div>
+<div class="footer">
+    <p>© 2023 <a href="index.html">UnitConverters</a></p>
+</div>
+    <script src="script.js"></script>
+    <!-- <div class="ad" align="center">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9497116538167818"
+     crossorigin="anonymous"></script> -->
+<!-- Ad1 -->
+<!-- <ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9497116538167818"
+     data-ad-slot="4535536338"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+    </div> -->
+</body>
+</html>
