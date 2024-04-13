@@ -6,7 +6,7 @@ const port = 3000
 const path = require('path');
 const messages=[]
 const openai = new OpenAI({
-  apiKey: "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" 
+  apiKey: "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" 
 });
 
 async function main(input) {
